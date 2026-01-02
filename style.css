@@ -7,7 +7,11 @@
       --bg: #ffffff;
     }
 
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box;
+
+          max-width: 100%;
+
+    }
 
     body {
       margin: 0;
@@ -21,6 +25,7 @@
     header {
       padding: 3rem 8vw 2.2rem;
       background: var(--bg);
+      background-image: '.\asset\coolbackgrounds-topography-micron.svg';
     }
 
     .hero-title {
@@ -242,3 +247,4 @@ html, body {
 html, body {
   -ms-overflow-style: none;
 }
+
