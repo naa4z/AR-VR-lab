@@ -211,22 +211,19 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
+/* ===== SINGLE CARD ON MOBILE ===== */
 @media (max-width: 600px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
   }
 
   .card {
-    padding: 0.8rem;
-    font-size: 0.85rem;
-  }
-
-  .card-img {
-    height: 110px;
+    padding: 1rem 1.2rem;
+    height: auto;
   }
 }
+
 /* ===== HIDE SCROLLBAR EVERYWHERE ===== */
 html, body {
   overflow-x: hidden;
