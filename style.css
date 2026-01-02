@@ -212,7 +212,74 @@
     grid-template-columns: 1fr;
   }
 }
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 600px) {
 
+  body {
+    font-size: 15px;          /* reduce overall scale */
+    line-height: 1.45;
+  }
+
+  header {
+    padding: 2rem 5vw 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1.5rem 5vw 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .section-sub {
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    gap: 1.2rem;
+  }
+
+  .card {
+    padding: 1rem 1.2rem;
+    height: auto;            /* IMPORTANT: remove tall cards */
+    font-size: 0.9rem;
+  }
+
+  .card-img {
+    height: 130px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+    padding: 1rem 5vw;
+  }
+}
 
 
 
