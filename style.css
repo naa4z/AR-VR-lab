@@ -351,6 +351,58 @@ h2 {
     margin-top: 1.2rem;
   }
 }
+@media (max-width: 600px) {
+  h1, h2 {
+    transform: translateY(20px); /* vertical only */
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+/* ===== SMALLER CARDS ON MOBILE ===== */
+@media (max-width: 600px) {
+
+  .grid {
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.82rem;
+    border-radius: 8px;
+    height: auto;
+  }
+
+  .card-img {
+    height: 95px;
+    margin-bottom: 0.4rem;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .meta {
+    font-size: 0.75rem;
+    margin-top: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .card-img {
+    height: 80px;
+  }
+}
 
 
 
