@@ -221,12 +221,24 @@
     height: 110px;
   }
 }
-body {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
+/* ===== HIDE SCROLLBAR EVERYWHERE ===== */
+html, body {
+  overflow-x: hidden;
 }
 
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari */
+  width: 0;
+  height: 0;
 }
 
+/* Firefox */
+html, body {
+  scrollbar-width: none;
+}
+
+/* IE / old Edge */
+html, body {
+  -ms-overflow-style: none;
+}
