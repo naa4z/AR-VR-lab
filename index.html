@@ -9,14 +9,24 @@
 <body>
   <!-- HERO -->
    <div class="head">
-    <header>
-    <h1 class="hero-title">NSDC ARVR Lab – Digital Tour</h1>
-    <p class="hero-sub">
-      Explore the immersive headsets, tracking systems, cameras, and high‑end computing devices
-      that power next‑generation augmented and virtual reality experiences at FISAT.
-    </p>
-    <a href="#headsets" class="btn-primary">Browse hardware</a>
-  </header>
+  <header class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">NSDC ARVR Lab – Digital Tour</h1>
+      <p class="hero-sub">
+        Explore the immersive headsets, tracking systems, cameras, and high-end computing devices
+        that power next-generation augmented and virtual reality experiences at FISAT.
+      </p>
+      <a href="#headsets" class="btn-primary">Browse hardware</a>
+    </div>
+
+    <!-- Dummy Logo -->
+    <div class="hero-logo">
+      <img src="./asset/logo.jpg" alt="Lab Logo" />
+    </div>
+  </div>
+</header>
+
 
   <!-- AR/VR + JOBS PARAGRAPH AFTER HEADER -->
   <section id="arvr-careers">
@@ -272,7 +282,7 @@
       <div class="grid">
         <article class="card">
           <span class="tag">Mounts & stands</span>
-          <img class="card-img" src="./asset/Scanner.webp" alt="Tripods and tablet supports" />
+          <img class="card-img" src="./asset/tripodwebp.webp" alt="Tripods and tablet supports" />
           <h3>Tripods & Tablet Supports</h3>
           <p>
             Tripods and tablet stands to position cameras, scanners, and display devices during
@@ -315,10 +325,83 @@
         </article>
       </div>
     </section>
+    <section id="why-arvr">
+  <h2>Why should we learn AR & VR?</h2>
+  <p class="section-sub">
+    Augmented Reality (AR) and Virtual Reality (VR) are no longer experimental technologies — they
+    are shaping the future of how we learn, work, design, and interact with digital information.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <span class="tag">Future Skills</span>
+      <h3>High-demand career opportunities</h3>
+      <p>
+        AR/VR skills are in high demand across industries such as gaming, healthcare, engineering,
+        architecture, education, defense, and manufacturing. Learning these technologies opens
+        pathways to future-ready careers.
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">Immersive Learning</span>
+      <h3>Better learning through experience</h3>
+      <p>
+        AR and VR enable learning by doing. Complex concepts can be visualized, simulated, and
+        practiced safely, improving understanding and retention compared to traditional methods.
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">Innovation</span>
+      <h3>Build next-generation solutions</h3>
+      <p>
+        From digital twins and smart factories to virtual labs and immersive storytelling, AR/VR
+        empowers creators to build innovative solutions that were not possible before.
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">Industry Ready</span>
+      <h3>Hands-on exposure to real hardware</h3>
+      <p>
+        Working with real AR/VR devices prepares students for industry workflows, tools, and
+        challenges, bridging the gap between theory and real-world application.
+      </p>
+    </article>
+  </div>
+</section>
   </main>
+  <!-- WHY LEARN AR/VR -->
+
 
   <footer>
     NSDC ARVR Lab – FISAT • Interactive Digital Hardware Inventory Portal.
   </footer>
+<script>
+  const animatedElements = document.querySelectorAll('.card, h1, h2');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(
+            entry.target.classList.contains('card') ? 'show' : 'heading-show'
+          );
+        } else {
+          entry.target.classList.remove('show', 'heading-show');
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  animatedElements.forEach(el => observer.observe(el));
+</script>
+
+
+
 </body>
 </html>

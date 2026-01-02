@@ -22,20 +22,13 @@
       font-size: 24px;
     }
 
-   header {
-  padding: 3rem 8vw 2.2rem;
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
-    ),
-    url("./asset/hero-bg.jpg") center / cover no-repeat;
-  color: #fff;
-}
+    header {
+      padding: 3rem 8vw 2.2rem;
+      background: var(--bg);
 
-    head{
-      background-image: url("./asset/coolbackgrounds-topography-micron.svg");
     }
+
+    head
     .hero-title {
       font-size: 2.8rem;
       margin: 0 0 0.5rem;
@@ -44,7 +37,6 @@
     .hero-sub {
       max-width: 720px;
       font-size: 1.05rem;
-      background-image: url("./asset/coolbackgrounds-topography-micron.svg");
       color: var(--mid-grey);
       margin: 0 0 1.7rem;
     }
@@ -256,4 +248,113 @@ html, body {
 html, body {
   -ms-overflow-style: none;
 }
+/* ===== SCROLL ANIMATION ===== */
+.card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  transition:
+    opacity 0.6s ease,
+    transform 0.8s ease;
+}
+
+/* when card becomes visible */
+.card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+#why-arvr {
+  background: var(--cream);
+  padding-top: 2rem;
+}
+#why-arvr .card{
+  height: 300px;
+}
+/* ===== HEADING SCROLL ANIMATION ===== */
+/* ===== CSS HEADING ANIMATION ===== */
+h2 {
+  transform: translateX(-40px);
+}
+/* ===== INTERACTIVE CTA BUTTON ===== */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Hover effect */
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(221, 112, 11, 0.45);
+  background: #f07d15;
+}
+
+/* Ripple light sweep */
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover::after {
+  left: 120%;
+}
+
+/* Click / tap feedback */
+.btn-primary:active {
+  transform: scale(0.96);
+}
+/* ===== HERO WITH LOGO ===== */
+.hero {
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.hero-logo img {
+  width: 500px;
+  height: auto;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+  margin-top: 50px;
+}
+
+.hero-logo img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 600px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-logo img {
+    width: 120px;
+    margin-top: 1.2rem;
+  }
+}
+
+
+
 
