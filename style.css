@@ -39,6 +39,7 @@
     .hero-sub {
       max-width: 720px;
       font-size: 1.05rem;
+      background-image: url("./asset/coolbackgrounds-topography-micron.svg");
       color: var(--mid-grey);
       margin: 0 0 1.7rem;
     }
